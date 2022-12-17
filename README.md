@@ -32,14 +32,14 @@ This project is the final exam for the robotics introduction course. For more de
 # Game difficulty levels
 
 > <h4>:one: Easy mode</h4>
-> The speed of the snake is constant and the food blink at a regular interval
+> The speed of the snake is constant and the food blink at a regular interval. The score increases by 1 point for each food eaten.
   
 > <h4>:two: Medium mode</h4>
-> The speed of the snake is higher than in easy mode.
+> The speed of the snake is higher than in easy mode. The score increases by 2 points for each food eaten.
       
 > <h4>:three: Hard mode</h4>
 > The speed of the snake is higher than in easy mode ( same as in medium mode) and we have bombs :bomb:. The bombs blink faster than the food, and if the snake touches 
-> them it dies
+> them it dies. The score increases by 3 points for each food eaten.
 
 
 </details>

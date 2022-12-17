@@ -48,6 +48,17 @@ This project is the final exam for the robotics introduction course. For more de
 <details>
 <summary><h2>ELECTRONIC SETUP :electric_plug:</h2> </summary>
 <br>
+      
+# Hardware components
+
+* Arduino UNO
+* 16x2 LCD
+* 8x8 led matrix
+* MAX7219 driver
+* joystick
+* active buzzer
+* 10UF electrolytic capacitor
+* 104pF ceramic capacitor
 
 
 </details>
@@ -65,4 +76,7 @@ This project is the final exam for the robotics introduction course. For more de
 
 
 </details>
+
+
+
 

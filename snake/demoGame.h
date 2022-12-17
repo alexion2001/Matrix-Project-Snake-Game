@@ -11,10 +11,6 @@ int fastMoveTime = 200;
 long lastMoveTime;
 
 
-//message delay
-const int messageTime = 3000;
-
-
 void generateFood() {
 int onSnake;
   //generate new pos
@@ -100,6 +96,14 @@ bool biteTail(){
   }
   return false;
 }
+bool newScore(){
+   int lastScore = EEPROM.read(24);  //read the last score  
+   if (score > lastScore) {// better than last score
+    return true;
+    }
+  return false;
+}
+
 
 void gameFinishMessage(){
   gameOverMatrix();
@@ -128,7 +132,32 @@ void gameFinishMessage(){
 
   delay(messageTime);
   dead = false;
-  mainMenu();
+
+  //Verify if the new score is in highscore
+  if (newScore() == true){ //if yes set name
+
+  currentLetter = 0; //reset the name
+  name[0] = 65;
+  name[1] = 65;
+  name[2] = 65;
+
+
+  lcd.clear();
+  lcd.setCursor(0, 0); 
+  lcd.print("New highscore!"); 
+  lcd.setCursor(0, 1); 
+
+  delay(messageTime);
+
+  inGame = false;
+  inScore = true;  
+  nameChange = true;
+  setName();
+  }
+  else{ //else go to main menu
+      mainMenu();    
+    }
+
 }
 
 void snakePermutation(){ // make the permujtation in snake list of dots
@@ -225,7 +254,16 @@ void checkUpdate(){
     snakeLen ++;
     snakeForward();
     snakePermutation(); //update snake
-    score ++; //update score
+    if (difficultyLevel == 0){
+        score ++; //update score easy
+    }
+    else if(difficultyLevel == 1){
+        score += 2; //update score medium
+    }
+    else if(difficultyLevel == 2){
+        score += 3; //update score hard
+    }
+    
     LcdGameUpdate();
     generateFood(); 
 

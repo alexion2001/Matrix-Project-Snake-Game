@@ -28,8 +28,6 @@ const int lastSettingsPosition = sizeof(settingsOptions)/sizeof(String) - 1;
 //highscore variables
 int highscore[5];
 String highscoreName[5];
-String const alphabet[] = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
-//                          0  1  2                                           
 
 
 //delay time
@@ -114,6 +112,8 @@ void mainMenu() {
  inMainMenu = true; 
  inGame = false;
  inSettings = false;
+ inScore = false;
+inScroll = false; 
 
   lcd.createChar(3, arrows[arrowBoth]);
   lcd.createChar(2, arrows[arrowUp]);
@@ -206,7 +206,7 @@ void info() {
   lcd.setCursor(1, 0);
   lcd.print("  Food points:");
   lcd.setCursor(1, 1);
-  lcd.print("  Easy: 1, Medium: 1.5, Hard: 2");
+  lcd.print("  Easy: 1, Medium: 2, Hard: 3");
 
   for (int positionCounter = 0; positionCounter < printCharacters; positionCounter++) { 
     lcd.scrollDisplayLeft();
@@ -229,8 +229,8 @@ void info() {
 
 }
 
-void displayScore(){
-  // get de top 5 highscore from EEPROM
+void readScore(){
+// get de top 5 highscore from EEPROM
   int adressPerPlayer = 4;
   int numberOfPlayers = 5;
   int lastPos = adressPerPlayer * numberOfPlayers;
@@ -242,12 +242,29 @@ void displayScore(){
     int letter2 = EEPROM.read(index + 1);
     int letter3 = EEPROM.read(index + 2);
   //read the score
+  char first = letter1;
+  char second = letter2;
+  char third = letter3;
+
     highscore[index/4 - 1] = EEPROM.read(index + 3);
-    highscoreName[index/4 - 1] = alphabet[letter1] + alphabet[letter2]; 
-    highscoreName[index/4 - 1] += alphabet[letter3];
+    highscoreName[index/4 - 1] = first;
+    highscoreName[index/4 - 1] += second; 
+    highscoreName[index/4 - 1] += third;
 
     
   }
+}
+
+void displayScore(){
+
+  readScore();
+
+  // get de top 5 highscore from EEPROM
+  int adressPerPlayer = 4;
+  int numberOfPlayers = 5;
+  int lastPos = adressPerPlayer * numberOfPlayers;
+  lastPos += 4;
+  
 
   int scoreDelay = 1000;
   //print on display the top 5
@@ -276,7 +293,8 @@ void displayScore(){
 
 }
 
-lcdSoundAnimation(){
+
+void lcdSoundAnimation(){
         
   lcd.createChar(4, LEVELS[0]); // empty
   lcd.createChar(5, LEVELS[1]); //full
@@ -311,7 +329,7 @@ lcdSoundAnimation(){
 }
 
 
-lcdDifficultyAnimation(int level){
+void lcdDifficultyAnimation(int level){
         
   lcd.createChar(4, LEVELS[0]); // empty
   lcd.createChar(5, LEVELS[1]); //full
@@ -378,6 +396,9 @@ void enterSettings(){
   inMainMenu = false; 
   inSettings = true;
   inGame = false;
+  inScore = false;
+  nameChange = false;
+  inScroll = false;
     
   lcd.clear();
   lcd.setCursor(2, 0); //title
@@ -456,11 +477,12 @@ void enterMainMenu(){
         inMainMenu = false; 
         inGame = true;
         inSettings = false;
+        inScore = false;
+        inScroll = false;
 
         resetMatrix(); //all matrix empty
         
         firstFood = true;
-        // matrix[xPos][yPos] = 1; // set start position 
         score = 0;
 
         gameSetup();
@@ -468,11 +490,14 @@ void enterMainMenu(){
       }
       else if (currentOption == 1) // game info
       { //game info
+        inScroll = true;      
         info();
       }
       else if (currentOption == 2) // highscore
       {//enter score
-        displayScore();       
+      inScroll = true;
+        displayScore(); 
+        
       }
       else if (currentOption == 3) // settings
       {  //enter settings
@@ -480,6 +505,7 @@ void enterMainMenu(){
       }
       else if (currentOption == 4) // about
       { //enter about
+        inScroll = true;
         about();
       }
 }

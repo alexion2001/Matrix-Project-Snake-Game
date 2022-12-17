@@ -15,6 +15,12 @@ const int soundModeAddress = 4;
 bool inMainMenu = true; //default 
 bool inGame = false;
 bool inSettings = false;
+bool inScore = false;
+bool inScroll = false;
+
+int name[3] = {0,0,0}; //AAA
+int currentLetter = 0;
+int nameChange = false;
 
 bool firstFood = false;
 
@@ -75,10 +81,10 @@ bool dead = false;
 #include <EEPROM.h>
 
 #include "matrixAnimation.h"
-#include "highscoreMenu.h"
 #include "mainMenu.h"
 #include "settingsMenu.h"
 #include "subMenus.h"
+#include "highscoreMenu.h"
 #include "joystickMovements.h"
 #include "demoGame.h"
 
@@ -135,6 +141,9 @@ void loop() {
   if (inGame){
     blinkFood(); 
     checkUpdate(); // update score and matrix
+  }
+  else if(inScore && nameChange){
+    setName();
   }
  
 }

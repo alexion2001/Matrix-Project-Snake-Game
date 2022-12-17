@@ -52,6 +52,14 @@ void readFromJoystick() {
              //we are in game mode
              // no button push
            }
+           else if (inScore){
+             //we are in new score menu
+             //when button exit this menu
+             sortScore();
+           }
+           else if(inScroll){
+             mainMenu();
+           }
 
 
       }
@@ -109,6 +117,18 @@ void readFromJoystick() {
             //     xPos = matrixSize - 1;
             //   }
            }
+           else if (inScore){
+             //we are in new score menu
+             //change to next letter
+              if (name[currentLetter] > 65){ // A code in ASCII
+                name[currentLetter] --;
+                nameChange = true;
+             }
+             else{
+               name[currentLetter] = 90; //Z
+                nameChange = true;
+             }
+           }
       } 
   if (xValue < minThreshold && joyMoved == false)  { //in jos
         joyMoved = true;
@@ -139,6 +159,18 @@ void readFromJoystick() {
               //   xPos = 0;
               // }
            } 
+           else if (inScore){
+             //we are in new score menu
+             //change to prev letter
+              if (name[currentLetter] < 90){  //Z code in ASCII
+                name[currentLetter] ++;
+                nameChange = true;
+             }
+             else{
+               name[currentLetter] = 65;
+                nameChange = true;
+             }
+           }
       }
   if (yValue > maxThreshold && joyMoved == false) { // in dreapta
         joyMoved = true;
@@ -157,6 +189,15 @@ void readFromJoystick() {
             //   else {
             //     yPos = 0;
             //   }
+           }
+           else if (inScore){
+             //we are in new score menu
+             //change to next chr
+             if (currentLetter < 2){
+                currentLetter ++;
+                nameChange = true;
+                
+             }
            }
       } 
   if (yValue < minThreshold && joyMoved == false)  { //in stanga
@@ -179,7 +220,16 @@ void readFromJoystick() {
               //     yPos = matrixSize - 1;
               //   }
 
-           }        
+           }   
+           else if (inScore){
+             //we are in new score menu
+             //change to prev chr
+             if (currentLetter > 0){
+                currentLetter --;
+                nameChange = true;
+                
+             }
+           }     
       }   
         
   lastJoyReading = joyReading;

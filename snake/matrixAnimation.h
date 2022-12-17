@@ -97,7 +97,7 @@ void greetingsMatrix() {
 void menuMatrix() { //smiley face
   lc.clearDisplay(0);
   for (int row = 0; row < matrixSize; row++) {
-  lc.setRow(0, row, smiley[row]);
+    lc.setRow(0, row, smiley[row]);
   }
     
 }
@@ -105,7 +105,7 @@ void menuMatrix() { //smiley face
 void gameOverMatrix() { 
   lc.clearDisplay(0);
   for (int row = 0; row < matrixSize; row++) {
-  lc.setRow(0, row, checkSign[row]);
+    lc.setRow(0, row, checkSign[row]);
   }
     
 }

@@ -51,3 +51,18 @@ This project is the final exam for the robotics introduction course. For more de
 
 
 </details>
+
+<details>
+<summary><h2>CODE DETAILS :computer:</h2> </summary>
+<br>
+
+> Memory addresses used for EEPROM
+
+
+
+![WhatsApp Image 2022-12-17 at 20 41 41](https://user-images.githubusercontent.com/96074975/208257029-43b06598-6802-4778-8fac-8d28ef2cddfc.jpg)
+
+
+
+</details>
+

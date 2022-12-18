@@ -235,12 +235,20 @@ The connections between the components are made through soldering, on a prototyp
 
 ![image](https://user-images.githubusercontent.com/96074975/208303451-4f75b9fb-8be3-4df0-a693-d3db6b45671f.png)
 
+> 4. Starting Game Matrix Animation
+      
+![image](https://user-images.githubusercontent.com/96074975/208304523-6a1dc90b-ca04-4d47-87ee-242b7dc76d57.png)
 
-> 4. Game Over Matrix Animation
+      
+> 5. Game Over Matrix Animation
       
 ![image](https://user-images.githubusercontent.com/96074975/208302842-89797a53-4a49-4b8f-aa38-76fdf0a3d3c7.png)
-
       
+
+> 6. New Highscore Matrix Animation
+      
+![image](https://user-images.githubusercontent.com/96074975/208303957-ba847601-91e6-4bf7-bede-20289d911738.png)
+
 
 </details>
 

@@ -56,7 +56,7 @@ This project is the final exam for the robotics introduction course. For more de
 * 8x8 led matrix
 * MAX7219 driver
 * joystick
-* active buzzer
+* active buzzer (not in use !)
 * 10UF electrolytic capacitor
 * 104pF ceramic capacitor
 * resistors
@@ -120,7 +120,7 @@ to be verify
 | D3 (10)            |   not in use    |
 | D4 (11)            |    7  |
 | D5 (12)            |    6   |
-| D6 (13)            |   0    |
+| D6 (13)            |   5    |
 | D7 (14)            |    4   |
 | A (15)            |    3  |
 | K (16)            | GND      |
@@ -138,6 +138,8 @@ to be verify
 ## Connecting the joystick and buzzer to Arduino
 
 > Connection Table
+      
+<h6> :bangbang: The buzzer is not working due to technical problems ! </h6>
 
 <table>
 <tr><th> Joystick </th><th> Buzzer </th></tr>
@@ -156,7 +158,7 @@ to be verify
 
 |Buzzer Pin|Arduino Pin | 
 |--|--|
-|5V|5|
+|5V|not in use|
 |GND|GND + 100 Ohm resistor|
 
 </td></tr> </table>
@@ -190,22 +192,12 @@ to be verify
 
 ## Matrix Animation :high_brightness:
       
->> 1. Geeting Message Matrix Animation
+> 1. Geeting Message Matrix Animation
+
+![snake](https://user-images.githubusercontent.com/96074975/208298769-c5c10da5-62a4-4385-91e6-cd17472953f7.png)
+
       
-<div style="display:flex">
-     <div style="flex:1;padding-right:10px;">
-          <img src="![image](https://user-images.githubusercontent.com/96074975/208298599-ada6ca5f-c461-46da-b70d-b51f6ced3454.png)" width="200"/>
-     </div>
-     <div style="flex:1;padding-left:10px;">
-          <img src="img/image2.png" width="300"/>
-     </div>
-     <div style="flex:1;padding-left:10px;">
-          <img src="img/image3.png" width="400"/>
-     </div>
-</div>
-      
-      
->> 2. Main Menu Matrix Animation
+> 2. Main Menu Matrix Animation
       
 ![image](https://user-images.githubusercontent.com/96074975/208298363-688ab317-6f7b-4267-ba4f-81242ada9b31.png)
 

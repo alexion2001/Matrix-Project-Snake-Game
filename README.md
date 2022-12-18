@@ -62,6 +62,7 @@ You can move through the menu using the joystick up and down. To enter an option
       - LCD brightness control
       - Matrix brightness control
       - Sounds ON or OFF
+      - Reset highscore
       - Exit to main menu
 
       

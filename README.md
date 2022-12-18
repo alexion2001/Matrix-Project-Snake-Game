@@ -56,7 +56,6 @@ This project is the final exam for the robotics introduction course. For more de
 * 8x8 led matrix
 * MAX7219 driver
 * joystick
-* active buzzer (not in use !)
 * 10UF electrolytic capacitor
 * 104pF ceramic capacitor
 * resistors
@@ -168,6 +167,12 @@ to be verify
       
 ![image](https://user-images.githubusercontent.com/96074975/208296958-ff794ba5-0350-40bf-bc90-1bfbba4a354f.png)
 
+
+## Setup pictures
+      
+The connections between the components are made through soldering, on a prototype board. The components were placed on the board with pin strips.
+      
+ ![setup](https://user-images.githubusercontent.com/96074975/208300730-135f8182-d648-4067-84a8-8c646473baee.jpg)
 
       
       

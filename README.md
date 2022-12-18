@@ -174,14 +174,43 @@ to be verify
 <details>
 <summary><h2>CODE DETAILS :computer:</h2> </summary>
 <br>
+      
+## Used libraries :books:
+      
+      - LiquidCrystal.h (for LCD control)
+      - LedControl.h (for matrix control)
+      - EEPROM.h (for memory)
 
-> Memory addresses used for EEPROM
+## Memory addresses used for EEPROM :floppy_disk:
 
 
 
 ![WhatsApp Image 2022-12-17 at 20 41 41](https://user-images.githubusercontent.com/96074975/208257029-43b06598-6802-4778-8fac-8d28ef2cddfc.jpg)
 
 
+## Matrix Animation :high_brightness:
+      
+>> 1. Geeting Message Matrix Animation
+      
+<div style="display:flex">
+     <div style="flex:1;padding-right:10px;">
+          <img src="![image](https://user-images.githubusercontent.com/96074975/208298599-ada6ca5f-c461-46da-b70d-b51f6ced3454.png)" width="200"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img src="img/image2.png" width="300"/>
+     </div>
+     <div style="flex:1;padding-left:10px;">
+          <img src="img/image3.png" width="400"/>
+     </div>
+</div>
+      
+      
+>> 2. Main Menu Matrix Animation
+      
+![image](https://user-images.githubusercontent.com/96074975/208298363-688ab317-6f7b-4267-ba4f-81242ada9b31.png)
+
+
+      
 
 </details>
 

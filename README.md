@@ -60,6 +60,48 @@ This project is the final exam for the robotics introduction course. For more de
 * 10UF electrolytic capacitor
 * 104pF ceramic capacitor
 
+## Connecting the driver to Arduino
+
+> Connection Table
+
+| Max7219 Driver Pins | Arduino Pins |
+|  :----:             |    :----:   |
+| 4 (GND)             | GND       |
+| 9 (GND)             | GND       |
+| 18 (ISET)           | 5V, resistor  |
+| 19 (V+)             | 5V      |
+| 1 (DIN)             | 13     |
+| 12 (LOAD/CS)        | 10       |
+| 13 (CLK)            | 12      |
+
+> Connection Electronic Schema
+
+![driverToarduino](https://user-images.githubusercontent.com/96074975/208295625-f6f6c6ea-b6d9-4b5f-a627-e9f9b456835b.jpg)
+
+
+## Connecting the driver to matrix
+
+> Connection Table
+
+to be verify
+
+> Matrix Pins - Common Cathode
+
+![matrix_rowCol](https://user-images.githubusercontent.com/96074975/208294894-3928c9a4-a4b3-4ace-8714-aa14d82cea7e.PNG)
+
+
+
+
+## Connecting the LCD to Arduino
+
+> Connection Table
+
+to be verify
+
+> LCD Pins
+
+![lsc_schema](https://user-images.githubusercontent.com/96074975/208295069-41e320fe-13fc-4fad-8a7b-00968cb27004.PNG)
+
 
 </details>
 

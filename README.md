@@ -1,35 +1,18 @@
 # Matrix-Project-Snake-Game :snake:
+
+This is a reproduction of the classic snake game, using Arduino.
 This project is the final exam for the robotics introduction course. For more details check this [repo](https://github.com/alexion2001/IntroductionToRobotics)
 
-<details>
-<summary><h2>THE MENU :clipboard:</h2> </summary>
-<br>
-
-> <h4>Main Menu :bookmark_tabs:</h4>
-
-      - Start game
-      - Highscore (top 5 scores)
-      - Settings
-      - Game info (how to play)
-      - About (details about creator) 
-  
-> <h4>Settings submenus: 🔧 </h4>
-  
-      - Level difficulty (Easy, Medium, Hard)
-      - LCD contrast control
-      - LCD brightness control
-      - Matrix brightness control
-      - Sounds ON or OFF
-      - Exit to main menu
-
-
-</details>
 
 <details>
 <summary><h2>GAME RULES :video_game:</h2> </summary>
 <br>
+      
+## Game info :speech_balloon:
 
-# Game difficulty levels
+The objective of the snake is to eat the food :pizza: to get the highest high score possible. The food offers different points depending on the difficulty chosen by the player. The game ends when the snake bites its tail (in any difficulty mode) or touches a bomb :boom: (in hard mode only).
+
+## Game difficulty levels
 
 > <h4>:one: Easy mode</h4>
 > The speed of the snake is constant and the food blink at a regular interval. The score increases by 1 point for each food eaten.
@@ -41,8 +24,50 @@ This project is the final exam for the robotics introduction course. For more de
 > The speed of the snake is higher than in easy mode ( same as in medium mode) and we have bombs :bomb:. The bombs blink faster than the food, and if the snake touches 
 > them it dies. The score increases by 3 points for each food eaten.
 
+      
+###  In game mode, difficulty: easy
+      
+![WhatsApp Image 2022-12-18 at 15 43 14](https://user-images.githubusercontent.com/96074975/208301657-e4196fb9-ec1e-4674-8511-8f62b3a38651.jpg)
 
+ 
+#  :ant: Bugs in game mode
+
+- Sometimes, during the game, random points light up (don't blink), but don't affect the game. They don't represent food or bombs. If the snake collects them, they turn off and do not affect the score. Reason for this bug: unknown.
+
+- There is a little lag between the joystick and the movement of the snake.  Reason for this bug: too much time passes between reading the input from the joystick and the command to move the snake (requires code improvement).
+      
 </details>
+
+
+<details>
+<summary><h2>THE MENU :clipboard:</h2> </summary>
+<br>
+      
+You can move through the menu using the joystick up and down. To enter an option press the joystick.
+
+> <h4>Main Menu :bookmark_tabs:</h4>
+
+      - Start game
+      - Highscore (top 5 scores)
+      - Settings
+      - Game info (how to play)
+      - About (details about creator) 
+  
+> <h4>Settings submenus: 🔧 </h4>
+      
+ You can move through the setting menu using the joystick up and down and change the options by moving the joystick left and right. To enter an option press the joystick.
+  
+      - Level difficulty (Easy, Medium, Hard)
+      - LCD contrast control
+      - LCD brightness control
+      - Matrix brightness control
+      - Sounds ON or OFF
+      - Exit to main menu
+
+      
+</details>
+
+
 
 
 <details>
@@ -205,7 +230,15 @@ The connections between the components are made through soldering, on a prototyp
 > 2. Main Menu Matrix Animation
       
 ![image](https://user-images.githubusercontent.com/96074975/208298363-688ab317-6f7b-4267-ba4f-81242ada9b31.png)
+      
+> 3. Settings Menu Matrix Animation
 
+![image](https://user-images.githubusercontent.com/96074975/208303451-4f75b9fb-8be3-4df0-a693-d3db6b45671f.png)
+
+
+> 4. Game Over Matrix Animation
+      
+![image](https://user-images.githubusercontent.com/96074975/208302842-89797a53-4a49-4b8f-aa38-76fdf0a3d3c7.png)
 
       
 

@@ -59,6 +59,7 @@ This project is the final exam for the robotics introduction course. For more de
 * active buzzer
 * 10UF electrolytic capacitor
 * 104pF ceramic capacitor
+* resistors
 
 ## Connecting the driver to Arduino
 
@@ -95,14 +96,79 @@ to be verify
 ## Connecting the LCD to Arduino
 
 > Connection Table
+    
+      
+<table>
+<tr><td>
 
-to be verify
+|Display Pin | Arduino Pin|
+|  :----:             |    :----:   |
+| VSS (1)             | GND       |
+| VDD (2)             | 5V       |
+| V0 (3)              | 11 |
+| RS (4)              | 9      |
+| RW (5)              | GND    |
+| E (6)               | 8     |
+| D0 (7)              |  not in use     |
+| D1 (8)              |  not in use     |
+
+</td><td>
+
+|Display Pin | Arduino Pin |
+|  :----:             |    :----:   |
+| D2 (9)              |   not in use     |
+| D3 (10)            |   not in use    |
+| D4 (11)            |    7  |
+| D5 (12)            |    6   |
+| D6 (13)            |   0    |
+| D7 (14)            |    4   |
+| A (15)            |    3  |
+| K (16)            | GND      |
+
+</td></tr> </table>
+      
+      
+      
 
 > LCD Pins
 
 ![lsc_schema](https://user-images.githubusercontent.com/96074975/208295069-41e320fe-13fc-4fad-8a7b-00968cb27004.PNG)
 
 
+## Connecting the joystick and buzzer to Arduino
+
+> Connection Table
+
+<table>
+<tr><th> Joystick </th><th> Buzzer </th></tr>
+<tr><td>
+
+|Joystick Pin|Arduino Pin  |
+|--|--|
+|VRx| A5|
+|VRy| A4|
+|SW| 2|
+|GND| GND|
+|VCC| 5V|
+      
+
+</td><td>
+
+|Buzzer Pin|Arduino Pin | 
+|--|--|
+|5V|5|
+|GND|GND + 100 Ohm resistor|
+
+</td></tr> </table>
+ 
+      
+> Joystick Schema      
+      
+![image](https://user-images.githubusercontent.com/96074975/208296958-ff794ba5-0350-40bf-bc90-1bfbba4a354f.png)
+
+
+      
+      
 </details>
 
 <details>

@@ -21,7 +21,7 @@ The objective of the snake is to eat the food :pizza: to get the highest high sc
 > The speed of the snake is higher than in easy mode. The score increases by 2 points for each food eaten.
       
 > <h4>:three: Hard mode</h4>
-> The speed of the snake is higher than in easy mode ( same as in medium mode) and we have bombs :bomb:. The bombs blink faster than the food, and if the snake touches 
+> The speed of the snake is higher than in easy mode ( same as in medium mode) and we have bombs :bomb:. The bombs blink faster than the food, and if the snake eat 
 > them it dies. The score increases by 3 points for each food eaten.
 
       

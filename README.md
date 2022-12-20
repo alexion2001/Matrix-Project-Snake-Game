@@ -12,6 +12,9 @@ This project is the final exam for the robotics introduction course. For more de
 
 The objective of the snake is to eat the food :pizza: to get the highest high score possible. The food offers different points depending on the difficulty chosen by the player. The game ends when the snake bites its tail (in any difficulty mode) or touches a bomb :boom: (in hard mode only).
 
+[Matrix project requirements.pdf](https://github.com/alexion2001/Matrix-Project-Snake-Game/files/10268222/Matrix.project.requirements.pdf)
+
+
 ## Game difficulty levels
 
 > <h4>:one: Easy mode</h4>

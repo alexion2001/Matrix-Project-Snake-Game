@@ -267,11 +267,34 @@ They are used to mark the direction in which the LCD can be scorolled (just up, 
 
 They are used to mark the fact that you can use the joystick to move left or right.   
       
-![image](https://user-images.githubusercontent.com/96074975/208674996-2fe59b30-4ba5-44a4-82a9-c6ef0055ba84.png)
+
+
+</details>
+
+<details>
+<summary><h2>GAME CASE</h2> </summary>
+<br>
+
+The case was designed in Fusion 360 and 3D printed.
+
+      
+![image](https://user-images.githubusercontent.com/96074975/208770858-cd050400-4a0a-4216-b3c8-e5b1f870514a.png)
+
+![image](https://user-images.githubusercontent.com/96074975/208771007-fa1cf13b-f3bd-49f9-9f68-0003b302eed6.png)
+
+![WhatsApp Image 2022-12-20 at 23 44 07](https://user-images.githubusercontent.com/96074975/208772823-2a82d9f7-81c2-4074-8526-25fac09ee4d5.jpg)
+
 
 
 </details>
 
 
+
 ### :movie_camera: You can see a demo video of the project on [YouTube](https://youtu.be/r9gvC8T1_gw)
+
+
+![WhatsApp Image 2022-12-20 at 23 44 06](https://user-images.githubusercontent.com/96074975/208772911-d126f4ce-ae55-4cdd-9619-990c1bc37e05.jpg)
+
+
+![WhatsApp Image 2022-12-20 at 23 44 06](https://user-images.githubusercontent.com/96074975/208773069-3a4fa533-b32d-4fba-9cee-a7f5dbb705c2.jpg)
 

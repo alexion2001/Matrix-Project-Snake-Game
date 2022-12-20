@@ -6,6 +6,7 @@ long lastBombBlinkTime;
 
 //snake movements
 int moveTime = 350;
+int mediumMoveTime = 250;
 int fastMoveTime = 200;
 long lastMoveTime;
 
@@ -139,7 +140,8 @@ void gameFinishMessage() {
     name[1] = 65;
     name[2] = 65;
 
-
+    winningMatrix();
+    
     lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print("New highscore!");
@@ -151,7 +153,6 @@ void gameFinishMessage() {
     inScore = true;
     nameChange = true;
     
-    winningMatrix();
     setName();
     
   } else {  //else go to main menu
@@ -221,8 +222,18 @@ void checkUpdate() {
       snakePermutation();
       lastMoveTime = millis();
     }
-  } else {
-    if (millis() - lastMoveTime > fastMoveTime) {  //medxium and hard level
+  } else if ((difficultyLevel == 1)) {
+    if (millis() - lastMoveTime > mediumMoveTime) {  //mediumblevel
+                                                   // game logic
+
+      snakeForward();
+      snakePermutation();
+
+      lastMoveTime = millis();
+    }
+  }
+  else{
+    if (millis() - lastMoveTime > fastMoveTime) {  //hard level
                                                    // game logic
 
       snakeForward();

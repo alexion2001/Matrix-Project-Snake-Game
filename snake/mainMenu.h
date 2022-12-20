@@ -28,10 +28,9 @@ const int lastSettingsPosition = sizeof(settingsOptions) / sizeof(String) - 1;
 int highscore[5];
 char highscoreName[15];
 
-
 //delay time
 const int delayMainMenu = 1500;
-const int scoreDelay = 1000;
+const int messageDelay = 1000;
 
 const byte arrows[][8] = {
   { 0b00000,
@@ -41,7 +40,8 @@ const byte arrows[][8] = {
     0b00000,
     0b00000,
     0b00000,
-    0b00000 },
+    0b00000 
+  },
   { 0b00000,
     0b00000,
     0b00000,
@@ -49,9 +49,7 @@ const byte arrows[][8] = {
     0b10001,
     0b01010,
     0b00100,
-    0b00000
-
-
+    0b00000 
   },
   { 0b00100,
     0b01010,
@@ -60,7 +58,26 @@ const byte arrows[][8] = {
     0b00000,
     0b10001,
     0b01010,
-    0b00100 }
+    0b00100 
+  },
+
+  { 0b00000,
+    0b00000,
+    0b00010,
+    0b00100,
+    0b01000,
+    0b00100,
+    0b00010,
+    0b00000 
+  },
+  { 0b00000,
+    0b00000,
+    0b01000,
+    0b00100,
+    0b00010,
+    0b00100,
+    0b01000,
+    0b00000 }
 };
 
 const uint8_t LEVELS[][8] = {
@@ -86,6 +103,8 @@ const uint8_t LEVELS[][8] = {
 const int arrowUp = 0;
 const int arrowDown = 1;
 const int arrowBoth = 2;
+const int arrowLeft = 3;
+const int arrowRight = 4;
 
 
 void greetings() {
@@ -223,7 +242,7 @@ void readScore() {
 
   for (int index = 5; index < lastPos; index = index + 4) {  // get de top 5 highscore
                                                              //read the name
-   
+
 
     int letter1 = EEPROM.read(index);
     int letter2 = EEPROM.read(index + 1);
@@ -235,27 +254,25 @@ void readScore() {
     char third = letter3;
 
 
-    highscore[index / 4 - 1] = EEPROM.read(index + 3); //score
+    highscore[index / 4 - 1] = EEPROM.read(index + 3);  //score
     highscoreName[indexInHighscore] = first;
     highscoreName[indexInHighscore + 1] = second;
     highscoreName[indexInHighscore + 2] = third;
 
     indexInHighscore += 3;
-
-    
   }
 }
 
 void displayScore() {
   readScore();
-   int indexInHighscore = 0;
+  int indexInHighscore = 0;
 
   //print on display the top 5
   lcd.clear();
   lcd.setCursor(3, 0);
   lcd.print("HIGHSCORE");  //title
 
-  delay(scoreDelay);
+  delay(messageDelay);
 
 
   int lastPosArray = 5;
@@ -265,15 +282,15 @@ void displayScore() {
     lcd.print("HIGHSCORE");
 
     lcd.setCursor(3, 1);
-    lcd.print(index + 1); //place index
+    lcd.print(index + 1);  //place index
     lcd.print(". ");
-    lcd.print(highscoreName[indexInHighscore]); //name
+    lcd.print(highscoreName[indexInHighscore]);  //name
     lcd.print(highscoreName[indexInHighscore + 1]);
     lcd.print(highscoreName[indexInHighscore + 2]);
     lcd.print(" ");
-    lcd.print(highscore[index]); //score
+    lcd.print(highscore[index]);  //score
 
-    delay(scoreDelay);
+    delay(messageDelay);
     indexInHighscore += 3;
   }
 
@@ -292,6 +309,7 @@ void lcdSoundAnimation() {
   lcd.createChar(4, LEVELS[0]);  // empty
   lcd.createChar(5, LEVELS[1]);  //full
 
+  delay(messageDelay);
 
   //title
   lcd.clear();
@@ -395,7 +413,7 @@ void lcdResetHightscore() {
   lcd.setCursor(5, 1);
   lcd.print("done");
 
-  delay(scoreDelay);
+  delay(messageDelay);
 }
 
 void enterSettings() {

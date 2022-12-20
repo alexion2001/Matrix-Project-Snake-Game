@@ -257,15 +257,17 @@ The connections between the components are made through soldering, on a prototyp
 ## LCD Symbols :heavy_check_mark:
       
 > 1. Up, Down and Both Arrows
-      They are used to mark the direction in which the LCD can be scorolled (just up, just down or both ways).
+
+They are used to mark the direction in which the LCD can be scorolled (just up, just down or both ways).
       
-      ![image](https://user-images.githubusercontent.com/96074975/208675283-63de5fa8-6867-45c9-9b2b-0a641b3929e3.png)
+![image](https://user-images.githubusercontent.com/96074975/208675283-63de5fa8-6867-45c9-9b2b-0a641b3929e3.png)
 
       
 > 2. Left, Right Arrows and +/- Signs
-      They are used to mark the fact that you can use the joystick to move left or right.   
+
+They are used to mark the fact that you can use the joystick to move left or right.   
       
-      ![image](https://user-images.githubusercontent.com/96074975/208674996-2fe59b30-4ba5-44a4-82a9-c6ef0055ba84.png)
+![image](https://user-images.githubusercontent.com/96074975/208674996-2fe59b30-4ba5-44a4-82a9-c6ef0055ba84.png)
 
 
 </details>

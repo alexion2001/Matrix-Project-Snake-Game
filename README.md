@@ -272,7 +272,7 @@ They are used to mark the fact that you can use the joystick to move left or rig
 </details>
 
 <details>
-<summary><h2>GAME CASE</h2> </summary>
+<summary><h2>GAME CASE :house: </h2> </summary>
 <br>
 
 The case was designed in Fusion 360 and 3D printed.

@@ -277,12 +277,8 @@ They are used to mark the fact that you can use the joystick to move left or rig
 
 The case was designed in Fusion 360 and 3D printed.
 
-      
-![image](https://user-images.githubusercontent.com/96074975/208770858-cd050400-4a0a-4216-b3c8-e5b1f870514a.png)
 
-![image](https://user-images.githubusercontent.com/96074975/208771007-fa1cf13b-f3bd-49f9-9f68-0003b302eed6.png)
-
-![WhatsApp Image 2022-12-20 at 23 44 07](https://user-images.githubusercontent.com/96074975/208772823-2a82d9f7-81c2-4074-8526-25fac09ee4d5.jpg)
+![print](https://user-images.githubusercontent.com/96074975/208871431-19c2bd0d-1189-47fd-9d74-16c9d6d32071.png)
 
 
 
